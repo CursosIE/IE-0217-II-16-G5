@@ -1,4 +1,5 @@
 // Dunia Barahona
+
 #include "Polinomio.h"
 
 Polinomio::Polinomio() {	
