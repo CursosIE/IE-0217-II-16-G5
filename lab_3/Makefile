@@ -16,5 +16,3 @@ pdf:
 	cd ./reporte/; xdg-open reporte_3.pdf
 clean:
 	rm -rf doxygen
-	#cd ./doxygen/; rm -rf doxygen
-	#cd ./doxygen/; rm -f *.db
