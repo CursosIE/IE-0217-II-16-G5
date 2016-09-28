@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #include "Figura.h"
 
 Figura::Figura() {		// Constructor vacío.
