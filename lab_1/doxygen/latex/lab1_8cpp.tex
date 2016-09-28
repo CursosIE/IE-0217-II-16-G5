@@ -1,0 +1,184 @@
+\hypertarget{lab1_8cpp}{\section{code/lab1.cpp File Reference}
+\label{lab1_8cpp}\index{code/lab1.\+cpp@{code/lab1.\+cpp}}
+}
+
+
+Memoria dinámica, arreglos, funciones y sintaxis en general de C++.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}string\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lab1_8cpp_ab175cad077651faadf68db365c5f0242}{cont} (char $\ast$$\ast$bss)
+\item 
+char \hyperlink{lab1_8cpp_ab460ab4f8bda5b545a2afa738f32f83e}{amino} (int b1, int b2, int b3)
+\item 
+char \hyperlink{lab1_8cpp_a3b63e487fa6635148a83d7b42fc90b87}{triplete} (char $\ast$bss)
+\item 
+int \hyperlink{lab1_8cpp_a4f435d449ee50c60b12f8d87d46a071c}{insp} (char $\ast$$\ast$bss)
+\item 
+char $\ast$ \hyperlink{lab1_8cpp_a792e88224ef766c7a16b298aef3d1374}{traducir\+A\+R\+Na\+A\+A} (char $\ast$$\ast$arn)
+\item 
+int \hyperlink{lab1_8cpp_ad1ef29bc534f2b58869743dea8020837}{imprimir\+Arreglo\+De\+Char} (char $\ast$a, int n)
+\item 
+int \hyperlink{lab1_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Memoria dinámica, arreglos, funciones y sintaxis en general de C++. 
+
+\begin{DoxyAuthor}{Author}
+Dunia Barahona \href{mailto:s4si@hotmail.com}{\tt s4si@hotmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\hypertarget{lab1_8cpp_DESCRIPCIÓN}{}\subsection{D\+E\+S\+C\+R\+I\+P\+C\+IÓ\+N}\label{lab1_8cpp_DESCRIPCIÓN}
+Programa que genera animoácidos a partir de los codones de un código genético (A\+R\+N) cualquiera, mediante la tabla de conversión A\+R\+N-\/aminoácidos.
+
+Imprime los aminoácidos que se traducen a partir de la serie de bases nitrogenadas (A, G, C, U) recibida de la línea de comandos. 
+
+\subsection{Function Documentation}
+\hypertarget{lab1_8cpp_ab460ab4f8bda5b545a2afa738f32f83e}{\index{lab1.\+cpp@{lab1.\+cpp}!amino@{amino}}
+\index{amino@{amino}!lab1.\+cpp@{lab1.\+cpp}}
+\subsubsection[{amino}]{\setlength{\rightskip}{0pt plus 5cm}char amino (
+\begin{DoxyParamCaption}
+\item[{int}]{b1, }
+\item[{int}]{b2, }
+\item[{int}]{b3}
+\end{DoxyParamCaption}
+)}}\label{lab1_8cpp_ab460ab4f8bda5b545a2afa738f32f83e}
+Determina cual aminoácido corresponde al codón de A\+R\+N ingresado según la tabla de conversión A\+R\+N a aminoácido. 
+\begin{DoxyParams}{Parameters}
+{\em b1} & es un entero que representa la primer base del codón. \\
+\hline
+{\em b2} & es un entero que representa la segunda base del codón. \\
+\hline
+{\em b3} & es un entero que representa la tercera base del codón. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Variable de tipo char. Aminoácido correspondiente al codón de bases ingresado. 
+\end{DoxyReturn}
+\hypertarget{lab1_8cpp_ab175cad077651faadf68db365c5f0242}{\index{lab1.\+cpp@{lab1.\+cpp}!cont@{cont}}
+\index{cont@{cont}!lab1.\+cpp@{lab1.\+cpp}}
+\subsubsection[{cont}]{\setlength{\rightskip}{0pt plus 5cm}int cont (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{bss}
+\end{DoxyParamCaption}
+)}}\label{lab1_8cpp_ab175cad077651faadf68db365c5f0242}
+Obtiene el tamaño del código genético (A\+R\+N) ingresado desde la línea de comandos. 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$$\ast$bss} & es un puntero doble de char que contiene la dirección de memoria del A\+R\+N ingresado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Variable de tipo entero. Cantidad de caracteres (bases) ingresados. 
+\end{DoxyReturn}
+\hypertarget{lab1_8cpp_ad1ef29bc534f2b58869743dea8020837}{\index{lab1.\+cpp@{lab1.\+cpp}!imprimir\+Arreglo\+De\+Char@{imprimir\+Arreglo\+De\+Char}}
+\index{imprimir\+Arreglo\+De\+Char@{imprimir\+Arreglo\+De\+Char}!lab1.\+cpp@{lab1.\+cpp}}
+\subsubsection[{imprimir\+Arreglo\+De\+Char}]{\setlength{\rightskip}{0pt plus 5cm}int imprimir\+Arreglo\+De\+Char (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{a, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lab1_8cpp_ad1ef29bc534f2b58869743dea8020837}
+Imprime {\bfseries n} caracteres de {\bfseries a}. 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$a} & es un puntero de char. \\
+\hline
+{\em n} & es un entero que representa la cantidad de chars del arreglo recibido. \\
+\hline
+\end{DoxyParams}
+\hypertarget{lab1_8cpp_a4f435d449ee50c60b12f8d87d46a071c}{\index{lab1.\+cpp@{lab1.\+cpp}!insp@{insp}}
+\index{insp@{insp}!lab1.\+cpp@{lab1.\+cpp}}
+\subsubsection[{insp}]{\setlength{\rightskip}{0pt plus 5cm}int insp (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{bss}
+\end{DoxyParamCaption}
+)}}\label{lab1_8cpp_a4f435d449ee50c60b12f8d87d46a071c}
+Verifica si el A\+R\+N ingresado cumple con las siguientes condiciones\+:
+\begin{DoxyItemize}
+\item La cantidad de bases que lo componen es multiplo de 3.
+\item Está compuesto únicamente por los caracteres que corresponden a bases nitrogenadas (A, C, G, U).
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$$\ast$bss} & es un puntero doble de char. Es el A\+R\+N ingresado desde la línea de comandos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Variable de tipo entero. Si retorna cero el A\+R\+N ingresado cumple las condiciones. 
+\end{DoxyReturn}
+\hypertarget{lab1_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{\index{lab1.\+cpp@{lab1.\+cpp}!main@{main}}
+\index{main@{main}!lab1.\+cpp@{lab1.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{lab1_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+Esta es la función principal. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & es la cantidad de elementos que recibe. \\
+\hline
+{\em $\ast$$\ast$argv} & son los valores recibidos. \\
+\hline
+\end{DoxyParams}
+\hypertarget{lab1_8cpp_a792e88224ef766c7a16b298aef3d1374}{\index{lab1.\+cpp@{lab1.\+cpp}!traducir\+A\+R\+Na\+A\+A@{traducir\+A\+R\+Na\+A\+A}}
+\index{traducir\+A\+R\+Na\+A\+A@{traducir\+A\+R\+Na\+A\+A}!lab1.\+cpp@{lab1.\+cpp}}
+\subsubsection[{traducir\+A\+R\+Na\+A\+A}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ traducir\+A\+R\+Na\+A\+A (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{arn}
+\end{DoxyParamCaption}
+)}}\label{lab1_8cpp_a792e88224ef766c7a16b298aef3d1374}
+Llama a la función \hyperlink{lab1_8cpp_a4f435d449ee50c60b12f8d87d46a071c}{insp} para asegurarse que el A\+R\+N ingresado es válido. 
+\begin{DoxyCode}
+1 int swch= insp(arn); 
+\end{DoxyCode}
+ Luego recorre el código génético ingresado para traducir cada codón por medio de la función \hyperlink{lab1_8cpp_a3b63e487fa6635148a83d7b42fc90b87}{triplete} . 
+\begin{DoxyCode}
+1 char amac;
+2 amac= triplete(temp);
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$$\ast$arn} & es un puntero doble de char con el A\+R\+N. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nuevo arreglo de char con los animoacidos que conforman la proteína resultante. 
+\end{DoxyReturn}
+\hypertarget{lab1_8cpp_a3b63e487fa6635148a83d7b42fc90b87}{\index{lab1.\+cpp@{lab1.\+cpp}!triplete@{triplete}}
+\index{triplete@{triplete}!lab1.\+cpp@{lab1.\+cpp}}
+\subsubsection[{triplete}]{\setlength{\rightskip}{0pt plus 5cm}char triplete (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{bss}
+\end{DoxyParamCaption}
+)}}\label{lab1_8cpp_a3b63e487fa6635148a83d7b42fc90b87}
+Traduce las bases del codón recibido según lo siguiente\+:
+\begin{DoxyItemize}
+\item A = 0
+\item C = 1
+\item G = 2
+\item U = 3
+\end{DoxyItemize}
+
+Guarda los valores en un puntero de enteros temporal {\bfseries temp} y lo usa como parámetro en la función \hyperlink{lab1_8cpp_ab460ab4f8bda5b545a2afa738f32f83e}{amino} la cual determina el aminoácido resultante.
+
+
+\begin{DoxyCode}
+1 char AA = amino(temp[0], temp[1], temp[2]); 
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$bss} & puntero de tipo char, donde cada char corresponde a un base nitrogenada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Variable de tipo char. Aminoácido correspondiente al codón ingresado. 
+\end{DoxyReturn}
