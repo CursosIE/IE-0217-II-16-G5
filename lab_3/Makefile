@@ -15,5 +15,6 @@ pdf:
 	cd ./reporte/; rm *.aux *.log *.out *.toc
 	cd ./reporte/; xdg-open reporte_3.pdf
 clean:
-	cd ./doxygen/; rm -rf latex html
-	cd ./doxygen/; rm -f *.db
+	rm -rf doxygen
+	#cd ./doxygen/; rm -rf doxygen
+	#cd ./doxygen/; rm -f *.db
