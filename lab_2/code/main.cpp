@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #include "Figura.h"
 #include "Circulo.h"
 #include "Cuadrado.h"
