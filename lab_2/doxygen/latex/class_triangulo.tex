@@ -1,0 +1,177 @@
+\hypertarget{class_triangulo}{\section{Triangulo Class Reference}
+\label{class_triangulo}\index{Triangulo@{Triangulo}}
+}
+
+
+Hereda de la clase \hyperlink{class_figura}{Figura} .  
+
+
+
+
+{\ttfamily \#include $<$Triangulo.\+h$>$}
+
+
+
+Inheritance diagram for Triangulo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_triangulo__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_triangulo_a905d421bd19655a979ccad9e2998db0c}{Triangulo} ()
+\item 
+\hyperlink{class_triangulo_a5649fe3785fa1c506b02f7fe64b00003}{Triangulo} (string \hyperlink{class_figura_a5be336617ed8a4d4f28115297b38da02}{nombre}, string \hyperlink{class_figura_a9f519b9504b95440f124a3099070e952}{color}, double \hyperlink{class_triangulo_a98c40cc40c68474e7c4b419b2b34b334}{lado\+\_\+1}, double \hyperlink{class_triangulo_abec4003e2b29d33419dd928e2d0bdb4f}{lado\+\_\+2}, double \hyperlink{class_triangulo_a4af14f654b0ddcf6415c0e11a2718fce}{lado\+\_\+3})
+\item 
+virtual \hyperlink{class_triangulo_aca2be15b19831e8d7a5331808f5c1958}{$\sim$\+Triangulo} ()
+\item 
+double \hyperlink{class_triangulo_a03250f2b46b4f7d06eb2c88187cf34b8}{semip} ()
+\item 
+virtual double \hyperlink{class_triangulo_a1c71a04df8caa1bcb52898636fb20004}{area} ()
+\item 
+virtual double \hyperlink{class_triangulo_ab82a50fa3dd74bc55606738ce5e31f7d}{pmt} ()
+\item 
+virtual void \hyperlink{class_triangulo_af7fc480161706ec74ece32e9ef1fed7f}{operator$\sim$} ()
+\item 
+virtual void \hyperlink{class_triangulo_ae0552ffa9641d36e1f571349e5de1070}{operator!} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_triangulo_a98c40cc40c68474e7c4b419b2b34b334}{lado\+\_\+1}
+\begin{DoxyCompactList}\small\item\em Corresponde a la longitud del primer lado del triángulo. \end{DoxyCompactList}\item 
+double \hyperlink{class_triangulo_abec4003e2b29d33419dd928e2d0bdb4f}{lado\+\_\+2}
+\begin{DoxyCompactList}\small\item\em Corresponde a la longitud del segundo lado del triángulo. \end{DoxyCompactList}\item 
+double \hyperlink{class_triangulo_a4af14f654b0ddcf6415c0e11a2718fce}{lado\+\_\+3}
+\begin{DoxyCompactList}\small\item\em Corresponde a lalongitud del tercer lado del triángulo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hereda de la clase \hyperlink{class_figura}{Figura} . 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_triangulo_a905d421bd19655a979ccad9e2998db0c}{\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\subsubsection[{Triangulo}]{\setlength{\rightskip}{0pt plus 5cm}Triangulo\+::\+Triangulo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_triangulo_a905d421bd19655a979ccad9e2998db0c}
+El {\bfseries constructor} es un método que se llama igual que la clase. \hypertarget{class_triangulo_a5649fe3785fa1c506b02f7fe64b00003}{\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\subsubsection[{Triangulo}]{\setlength{\rightskip}{0pt plus 5cm}Triangulo\+::\+Triangulo (
+\begin{DoxyParamCaption}
+\item[{string}]{nombre, }
+\item[{string}]{color, }
+\item[{double}]{lado\+\_\+1, }
+\item[{double}]{lado\+\_\+2, }
+\item[{double}]{lado\+\_\+3}
+\end{DoxyParamCaption}
+)}}\label{class_triangulo_a5649fe3785fa1c506b02f7fe64b00003}
+Constructor que recibe los atributos como parámetros. \hypertarget{class_triangulo_aca2be15b19831e8d7a5331808f5c1958}{\index{Triangulo@{Triangulo}!````~Triangulo@{$\sim$\+Triangulo}}
+\index{````~Triangulo@{$\sim$\+Triangulo}!Triangulo@{Triangulo}}
+\subsubsection[{$\sim$\+Triangulo}]{\setlength{\rightskip}{0pt plus 5cm}Triangulo\+::$\sim$\+Triangulo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_triangulo_aca2be15b19831e8d7a5331808f5c1958}
+Destructor, sirve para destruir un objeto de la clase. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_triangulo_a1c71a04df8caa1bcb52898636fb20004}{\index{Triangulo@{Triangulo}!area@{area}}
+\index{area@{area}!Triangulo@{Triangulo}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_triangulo_a1c71a04df8caa1bcb52898636fb20004}
+Calcula el área del triángulo dadas las longitudes de cada uno de sus lados como atributos del objeto. \begin{DoxyReturn}{Returns}
+Área del triángulo. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_figura_ade6b12995c86cb72e37738668d77963d}{Figura}.
+
+\hypertarget{class_triangulo_ae0552ffa9641d36e1f571349e5de1070}{\index{Triangulo@{Triangulo}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Triangulo@{Triangulo}}
+\subsubsection[{operator"!}]{\setlength{\rightskip}{0pt plus 5cm}void Triangulo\+::operator! (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_triangulo_ae0552ffa9641d36e1f571349e5de1070}
+Sobrecarga del operador {\bfseries !} 
+
+Imprime los valores calculados del área y perímetro del triángulo. 
+
+Reimplemented from \hyperlink{class_figura_a361ecd93374af526d5b791b7b67d510a}{Figura}.
+
+\hypertarget{class_triangulo_af7fc480161706ec74ece32e9ef1fed7f}{\index{Triangulo@{Triangulo}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Triangulo@{Triangulo}}
+\subsubsection[{operator$\sim$}]{\setlength{\rightskip}{0pt plus 5cm}void Triangulo\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_triangulo_af7fc480161706ec74ece32e9ef1fed7f}
+Sobrecarga del operador {\bfseries $\sim$} 
+
+Imprime los atributos del objeto. 
+
+Reimplemented from \hyperlink{class_figura_ab0e96a77be9c277b66b7ae73172fdcb0}{Figura}.
+
+\hypertarget{class_triangulo_ab82a50fa3dd74bc55606738ce5e31f7d}{\index{Triangulo@{Triangulo}!pmt@{pmt}}
+\index{pmt@{pmt}!Triangulo@{Triangulo}}
+\subsubsection[{pmt}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::pmt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_triangulo_ab82a50fa3dd74bc55606738ce5e31f7d}
+Calcula el perímetro del triángulo dadas las longitudes de cada uno de los tres lados como atributos del objeto. \begin{DoxyReturn}{Returns}
+Perímetro del triángulo. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_figura_a522ea732b30ffa838731fced76a593ef}{Figura}.
+
+\hypertarget{class_triangulo_a03250f2b46b4f7d06eb2c88187cf34b8}{\index{Triangulo@{Triangulo}!semip@{semip}}
+\index{semip@{semip}!Triangulo@{Triangulo}}
+\subsubsection[{semip}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::semip (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_triangulo_a03250f2b46b4f7d06eb2c88187cf34b8}
+Calcula el semiperímetro del triángulo dadas las longitudes de cada uno de sus lados como atributos del objeto. \begin{DoxyReturn}{Returns}
+Semiperímetro del triángulo. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_triangulo_a98c40cc40c68474e7c4b419b2b34b334}{\index{Triangulo@{Triangulo}!lado\+\_\+1@{lado\+\_\+1}}
+\index{lado\+\_\+1@{lado\+\_\+1}!Triangulo@{Triangulo}}
+\subsubsection[{lado\+\_\+1}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::lado\+\_\+1}}\label{class_triangulo_a98c40cc40c68474e7c4b419b2b34b334}
+
+
+Corresponde a la longitud del primer lado del triángulo. 
+
+\hypertarget{class_triangulo_abec4003e2b29d33419dd928e2d0bdb4f}{\index{Triangulo@{Triangulo}!lado\+\_\+2@{lado\+\_\+2}}
+\index{lado\+\_\+2@{lado\+\_\+2}!Triangulo@{Triangulo}}
+\subsubsection[{lado\+\_\+2}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::lado\+\_\+2}}\label{class_triangulo_abec4003e2b29d33419dd928e2d0bdb4f}
+
+
+Corresponde a la longitud del segundo lado del triángulo. 
+
+\hypertarget{class_triangulo_a4af14f654b0ddcf6415c0e11a2718fce}{\index{Triangulo@{Triangulo}!lado\+\_\+3@{lado\+\_\+3}}
+\index{lado\+\_\+3@{lado\+\_\+3}!Triangulo@{Triangulo}}
+\subsubsection[{lado\+\_\+3}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::lado\+\_\+3}}\label{class_triangulo_a4af14f654b0ddcf6415c0e11a2718fce}
+
+
+Corresponde a lalongitud del tercer lado del triángulo. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+code/\hyperlink{_triangulo_8h}{Triangulo.\+h}\item 
+code/\hyperlink{_triangulo_8cpp}{Triangulo.\+cpp}\end{DoxyCompactItemize}
