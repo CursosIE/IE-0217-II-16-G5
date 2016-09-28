@@ -1,0 +1,5 @@
+<map id="Figura" name="Figura">
+<area shape="rect" id="node2" href="$class_circulo.html" title="Hereda de la clase Figura . " alt="" coords="5,255,103,421"/>
+<area shape="rect" id="node3" href="$class_cuadrado.html" title="Hereda de la clase Figura . " alt="" coords="127,255,234,421"/>
+<area shape="rect" id="node4" href="$class_triangulo.html" title="Hereda de la clase Figura . " alt="" coords="259,233,361,443"/>
+</map>
