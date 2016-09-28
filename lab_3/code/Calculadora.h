@@ -41,5 +41,5 @@ public:
 		~d;
 	}
 };
-#endif /* CALCULADORA_H */
 // las otras clases si tienen .cpp. Solo plantilla no.
+#endif /* CALCULADORA_H */
