@@ -54,6 +54,17 @@
 \hrule
 \hrule
 
+\section{Introducción}
+Este laboratorio tuvo como objetivo comprender como funciona la programación genérica en C++, así como poner en práctica la creación de objetos de diferentes clases y la sobrecarga de operadores.
+\subsection{Objetivos}
+\begin{itemize}
+	\item Construir clases Fraccion, Polinomio y Matriz.
+	\item Sobrecargar operadores.
+	\item Construir una clase emplantillada en C++.
+	\item Implementar clase emplantillada con diferentes objetos, ya sea del tipo Fraccion, Polinomio o Matriz.
+	
+\end{itemize}
+\newpage
 \section{Código}
 \lstset{inputencoding=utf8/latin1}
 
@@ -69,19 +80,19 @@
 template <typename data> //data puede ser Fraccion, polinomio o matriz
 class Calculadora {
 public:	
-	Calculadora() { //Constructor
+	Calculadora() {  //Constructor
 	}
-	~Calculadora() { //Destructor
+	~Calculadora() {  //Destructor
 	}
-	data add(data d1, const data d2) {
+	data add(data d1, const data d2) {  
 		data d= d1+d2;
 		return d;
 	}
-	data sub(data d1, const data d2) {
+	data sub(data d1, const data d2) {  
 		data d= d1-d2;
 		return d;
 	}
-	data mul(data d1, const data d2) {
+	data mul(data d1, const data d2) {  
 		data d= d1*d2;
 		return d;
 	}
@@ -95,8 +106,7 @@ public:
 };
 #endif /* CALCULADORA_H */
 \end{lstlisting}
-\vspace{1 em}
-
+\newpage
 \subsection{Clase Fraccion}
 \subsubsection*{Fraccion.h}
 \begin{lstlisting}.
@@ -125,48 +135,48 @@ public:
 };
 #endif /* FRACCION_H */	
 \end{lstlisting}
-\newpage
+\vspace{2 em}
 \subsubsection*{Fraccion.cpp}
 \begin{lstlisting}
 #include "Fraccion.h"
 
-	Fraccion::Fraccion() {	//constructor	
-	}
-	Fraccion::Fraccion(double num, double den) {
-		this->num =num;
-		this->den =den;
-	}
-	Fraccion::~Fraccion() {	//Destructor
-	}	
-	Fraccion Fraccion::operator+(const Fraccion f2) {
-		Fraccion fadd;
-		fadd.num= (this->num * f2.den)+(f2.num * this->den);
-		fadd.den= (this->den * f2.den);
-		return fadd;
-	}
-	Fraccion Fraccion::operator-(const Fraccion f2) {	
-		Fraccion fsub;
-		fsub.num= (this->num * f2.den)-(f2.num * this->den);
-		fsub.den= (this->den * f2.den);
-		return fsub;
-	}
-	Fraccion Fraccion::operator*(const Fraccion f2) {	
-		Fraccion fmul;
-		fmul.num= this->num * f2.num;
-		fmul.den= this->den * f2.den;
-		return fmul;
-	}
-	Fraccion Fraccion::operator/(const Fraccion f2) {	
-		Fraccion fdiv;
-		fdiv.num= this->num * f2.den;
-		fdiv.den= this->den * f2.num;
-		return fdiv;
-	}
-	void Fraccion::operator~() {	
-		cout<< this->num<< "/"<< this->den<< endl;
-	}
+Fraccion::Fraccion() {  //Constructor	
+}
+Fraccion::Fraccion(double num, double den) {
+	this->num =num;
+	this->den =den;
+}
+Fraccion::~Fraccion() {  //Destructor
+}	
+Fraccion Fraccion::operator+(const Fraccion f2) {
+	Fraccion fadd;
+	fadd.num= (this->num * f2.den)+(f2.num * this->den);
+	fadd.den= (this->den * f2.den);
+	return fadd;
+}
+Fraccion Fraccion::operator-(const Fraccion f2) {	
+	Fraccion fsub;
+	fsub.num= (this->num * f2.den)-(f2.num * this->den);
+	fsub.den= (this->den * f2.den);
+	return fsub;
+}
+Fraccion Fraccion::operator*(const Fraccion f2) {	
+	Fraccion fmul;
+	fmul.num= this->num * f2.num;
+	fmul.den= this->den * f2.den;
+	return fmul;
+}
+Fraccion Fraccion::operator/(const Fraccion f2) {	
+	Fraccion fdiv;
+	fdiv.num= this->num * f2.den;
+	fdiv.den= this->den * f2.num;
+	return fdiv;
+}
+void Fraccion::operator~() {	
+	cout<< this->num<< "/"<< this->den<< endl;
+}
 \end{lstlisting}
-\newpage
+\vspace{2 em}
 \subsection{Clase Matriz}
 \subsubsection*{Matriz.h}
 \begin{lstlisting}
@@ -197,19 +207,19 @@ public:
 };
 #endif /* MATRIZ_H */
 \end{lstlisting}
-\vspace{1 em}
+\vspace{2 em}
 \subsubsection*{Matriz.cpp}
 \begin{lstlisting}
 #include "Matriz.h"
 
-Matriz::Matriz() { //Constructor simple
+Matriz::Matriz() {  //Constructor simple
 }
-Matriz::Matriz(int m, int n, double** matrix) { //Constructor con atributos
+Matriz::Matriz(int m, int n, double** matrix) {  //Constructor con atributos
 	this->m =m;
 	this->n =n;
 	this->matrix =matrix;
 }
-Matriz::~Matriz() {	//Destructor	
+Matriz::~Matriz() {  //Destructor	
 }
 Matriz Matriz::operator+(const Matriz m2) {	
 	Matriz m1(this->m, this->n, this->matrix);
@@ -219,11 +229,11 @@ Matriz Matriz::operator+(const Matriz m2) {
 		return m1;
 	}
 	else{
-	for(int i=0;i<m;i++){
-	for(int j=0; j<n; j++){
+		for(int i=0;i<m;i++){
+		for(int j=0; j<n; j++){
 		madd.matrix[i][j]=this->matrix[i][j]+m2.matrix[i][j];
-	}
-	}
+		}
+		}
 	}
 	return madd;
 }	
@@ -249,9 +259,9 @@ Matriz Matriz::operator*(const Matriz m2) {
 		mat2[i] = (double *) malloc(sizeof(double)*m2.n); 
 	}
 	for(int i=0;i<this->m;i++){
-	for(int j=0; j<m2.n; j++){
-		mat2[i][j]=0;
-	}
+		for(int j=0; j<m2.n; j++){
+			mat2[i][j]=0;
+		}
 	}
 	Matriz mmul(this->m,m2.n,mat2);
 	Matriz m1(this->m, this->n, this->matrix);
@@ -278,19 +288,19 @@ Matriz Matriz::operator/(const Matriz m2) {
 		return m1;
 	}
 	else{
-	for(int i=0;i<m;i++){
-	for(int j=0; j<n; j++){
-	madd.matrix[i][j]=this->matrix[i][j]/m2.matrix[i][j];
-	}
-	}
+		for(int i=0;i<m;i++){
+		for(int j=0; j<n; j++){
+		madd.matrix[i][j]=this->matrix[i][j]/m2.matrix[i][j];
+		}
+		}
 	}
 	return madd;
 }
 void Matriz::operator~() {   
 	for(int i=0;i<m;i++){
-	for(int j=0; j<n; j++){
-		cout<< this->matrix[i][j]<<"\t";
-	}
+		for(int j=0; j<n; j++){
+			cout<< this->matrix[i][j]<<"\t";
+		}
 	cout<<endl;
 	}
 }
@@ -310,8 +320,8 @@ using namespace std;
 class Polinomio {
 public:
 	int tam;	
-	char var; 	///Variable del polinomio
-	double* coef; //Coeficientes numéricos del polinomio		
+	char var;      //Variable del polinomio
+	double* coef;  //Coeficientes del polinomio		
 	
 	Polinomio();
 	Polinomio(int tam, char var, double* coef);
@@ -336,11 +346,10 @@ Polinomio::Polinomio(int tam, char var, double* coef) {
 	this->tam= tam;
 	this->var= var;
 	double* temp= new double[tam];
-	for (int i= 0; i< tam; i++)
-	{
-	temp[i]= coef[tam-1-i];
-	}
-	//les da vuelta, queda vector donde la posicion es el exponente
+		for (int i= 0; i< tam; i++) {
+			temp[i]= coef[tam-1-i];
+		}
+		//les da vuelta, queda vector donde la posicion es el exponente
 	this->coef= temp;
 }
 Polinomio::~Polinomio() { //Destructor
@@ -395,7 +404,7 @@ Polinomio Polinomio::operator-(Polinomio p2) {
 			temp[pm.tam+i]= pM.coef[pm.tam+i];
 		}
 		else {
-		temp[pm.tam+i]= (-1)*pM.coef[pm.tam+i];
+			temp[pm.tam+i]= (-1)*pM.coef[pm.tam+i];
 		}
 	}
 	psub.coef= temp;
@@ -436,13 +445,13 @@ Polinomio Polinomio::operator/(Polinomio p2) {
 		for (int k = 0; k < tamdiv; k++) {
 			div[k]=0;
 		}
-	div[i]= pb.coef[pb.tam-j]/p2.coef[p2.tam-1];
-	cociente[i]= div[i];
-	pdiv.coef= div;
-	pc= pdiv*p2;
-	pd= pb-pc;
-	pb.coef= pd.coef;
-	j++;
+		div[i]= pb.coef[pb.tam-j]/p2.coef[p2.tam-1];
+		cociente[i]= div[i];
+		pdiv.coef= div;
+		pc= pdiv*p2;
+		pd= pb-pc;
+		pb.coef= pd.coef;
+		j++;
 	}
 	pdiv.coef= cociente;
 	return pdiv;
@@ -463,21 +472,22 @@ void Polinomio::operator~() {
 			}
 		}
 		if (i>0) {
-		if (this->coef[i]==-1) {
-			cout<<'-';
-		}
-		if (this->coef[i]!=0&&this->coef[i]!=1&&this->coef[i]!=-1) {
-			cout<<this->coef[i];
-		}
-		if (this->coef[i]!=0) {
-			cout<<this->var;
-		}
-		if ((i!=1)&&(this->coef[i]!=0)) {
-			cout<<'^'<<i;
-		}
-		if (this->coef[i-1]>0) {
-			cout<<'+';
-		}
+			if (this->coef[i]==-1) {
+				cout<<'-';
+			}
+			if (this->coef[i]!=0&&this->coef[i]!=1
+			&&this->coef[i]!=-1) {
+				cout<<this->coef[i];
+			}
+			if (this->coef[i]!=0) {
+				cout<<this->var;
+			}
+			if ((i!=1)&&(this->coef[i]!=0)) {
+				cout<<'^'<<i;
+			}
+			if (this->coef[i-1]>0) {
+				cout<<'+';
+			}
 		}
 		if (i==0) {
 			cout<<endl;
