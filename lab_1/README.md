@@ -7,6 +7,6 @@ Dunia Barahona B40806
 3) Para ver la documentación HTML generada :
 
 	opción 1: Abrir el archivo ./doxygen/html/index.html
-	opción 2: Abrir y correr el archivo Config_File_2 con doxywizard
+	opción 2: Abrir y correr el archivo Config_File_1 con doxywizard
 	
 5) Para generar el reporte: make pdf 
