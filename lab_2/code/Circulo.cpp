@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #include "Circulo.h"
 
 Circulo::Circulo() {		// Función que se llama 'Circulo' y pertenece (::) a la clase 'Circulo'

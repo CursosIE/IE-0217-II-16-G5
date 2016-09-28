@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #ifndef TRIANGULO_H
 #define TRIANGULO_H
 

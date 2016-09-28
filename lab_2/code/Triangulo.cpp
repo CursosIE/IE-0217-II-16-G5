@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #include "Triangulo.h"
 
 Triangulo::Triangulo() {		// Método que se llama 'Triangulo' y pertenece (::) a la clase 'Triangulo'

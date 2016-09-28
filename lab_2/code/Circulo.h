@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #ifndef CIRCULO_H
 #define CIRCULO_H
 

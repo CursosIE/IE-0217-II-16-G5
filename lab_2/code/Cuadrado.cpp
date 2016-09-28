@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #include "Cuadrado.h"
 
 Cuadrado::Cuadrado() {		// Método que se llama 'Cuadrado' y pertenece (::) a la clase 'Cuadrado'

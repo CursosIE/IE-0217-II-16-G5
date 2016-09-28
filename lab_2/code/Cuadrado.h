@@ -1,4 +1,4 @@
-// Dunia Barahona. B40806
+// Dunia Barahona
 #ifndef CUADRADO_H
 #define CUADRADO_H
 
