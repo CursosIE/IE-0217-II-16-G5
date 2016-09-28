@@ -1,6 +1,6 @@
 Dunia Barahona B40806
 
-1) Para compilar y ejecutar el código:  make code
+1) Para compilar y ejecutar el código: make code
 
 2) Para generar la documentación con Doxygen: make doc
 
