@@ -4,6 +4,7 @@ run:
 	cd ./code; ./main
 clean:
 	cd ./code; rm main
+
 code:	comp run clean
 doc:
 	doxygen Config_File_2
