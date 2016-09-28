@@ -1,7 +1,7 @@
 // Dunia Barahona
 #include "Circulo.h"
 
-Circulo::Circulo() {		// Función que se llama 'Circulo' y pertenece (::) a la clase 'Circulo'
+Circulo::Circulo() {		//Función que se llama 'Circulo' y pertenece (::) a la clase 'Circulo'
 	/// @brief El @b constructor es una función que se llama igual que la clase.
 }
 Circulo::Circulo(string nombre, string color, double radio) {
