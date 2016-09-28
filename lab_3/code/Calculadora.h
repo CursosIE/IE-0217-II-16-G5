@@ -1,4 +1,5 @@
-//Dunia Barahona. Clase emplantillada
+//Dunia Barahona
+//Clase emplantillada
 #ifndef CALCULADORA_H
 #define CALCULADORA_H
 

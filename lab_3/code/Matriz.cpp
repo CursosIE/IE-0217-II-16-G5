@@ -17,8 +17,7 @@ Matriz::~Matriz()
 	///@brief Destructor	
 }
 Matriz Matriz::operator+(const Matriz m2) 
-{	
-	///@brief Sobrecarga del operador @b +
+{	///@brief Sobrecarga del operador @b +
 	///
 	///Método que pertenece a la clase Matriz y que devuelve un objeto de tipo Matriz 
 	///@param m2 objeto de tipo Matriz
@@ -60,8 +59,7 @@ Matriz Matriz::operator-(const Matriz m2)
 	return madd;
 }	
 Matriz Matriz::operator*(const Matriz m2) 
-{	
-	///@brief Sobrecarga del operador @b *
+{	///@brief Sobrecarga del operador @b *
 	///
 	///Método que pertenece a la clase Matriz y que devuelve un objeto de tipo Matriz 
 	///@param m2 objeto de tipo Matriz
