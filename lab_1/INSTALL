@@ -1,0 +1,7 @@
+El makefile de este programa contiene 4 targets:
+	*compilar
+	*borrar
+	*ejecutar
+	*todo
+Escriba en la línea de comandos:
+	make all
