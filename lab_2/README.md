@@ -10,3 +10,5 @@ Dunia Barahona B40806
 	opción 2: Abrir y correr el archivo Config_File_2 con doxywizard
 	
 5) Para generar el reporte: make pdf 
+
+6) Para eliminar la documentación creada de doxygen (una vez vista): make clean
