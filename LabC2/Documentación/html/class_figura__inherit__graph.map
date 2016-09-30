@@ -1,0 +1,5 @@
+<map id="Figura" name="Figura">
+<area shape="rect" id="node2" href="$class_circulo.html" title="{Circulo\n|+ color\l+ nombre\l+ r\l|+ operator~()\l+ operator!()\l+ Circulo()\l+ Circulo()\l+ area()\l+ perimetro()\l+ ~Circulo()\l}" alt="" coords="5,241,103,435"/>
+<area shape="rect" id="node3" href="$class_cuadrado.html" title="{Cuadrado\n|+ color\l+ nombre\l+ l\l|+ operator~()\l+ operator!()\l+ Cuadrado()\l+ Cuadrado()\l+ area()\l+ perimetro()\l+ ~Cuadrado()\l}" alt="" coords="127,241,234,435"/>
+<area shape="rect" id="node4" href="$class_triangulo.html" title="{Triangulo\n|+ color\l+ nombre\l+ l1\l+ l2\l+ l3\l+ s\l|+ operator~()\l+ operator!()\l+ Triangulo()\l+ Triangulo()\l+ area()\l+ perimetro()\l+ ~Triangulo()\l}" alt="" coords="259,219,361,457"/>
+</map>
