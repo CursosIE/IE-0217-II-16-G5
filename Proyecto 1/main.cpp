@@ -18,8 +18,8 @@ using namespace std;
 int main(int argc, char** argv) {
 	srand((unsigned int) time (NULL)); 
 	double l=0;
-	int m=8;
-	int n=8;
+	int m=256;
+	int n=256;
 	double **mat1 = (double **) malloc(sizeof(double *)*m);
 	for(int i=0; i<m; i++){
         mat1[i] = (double *) malloc(sizeof(double)*n); 
@@ -38,17 +38,43 @@ int main(int argc, char** argv) {
             mat2[i][j]=rand()%10;
   			}
 		}
+	double **mat3 = (double **) malloc(sizeof(double *)*m);
+	for(int i=0; i<m; i++){
+        mat3[i] = (double *) malloc(sizeof(double)*n); 
+	}
+	for(int i=0;i<m;i++){
+		for(int j=0; j<n; j++){
+            mat3[i][j]=rand()%10;
+  			}
+		}
+	double **mat4 = (double **) malloc(sizeof(double *)*m);
+	for(int i=0; i<m; i++){
+        mat4[i] = (double *) malloc(sizeof(double)*n); 
+	}
+	for(int i=0;i<m;i++){
+		for(int j=0; j<n; j++){
+            mat4[i][j]=rand()%10;
+  			}
+		}
 	Matriz m1(m,n, mat1);
 	Matriz m2(m,n, mat2);
-	Matriz m3(2,2,m1.mat2x2(m2));
-	cout<<endl<<"Matriz m1:"<<endl;
+//	Matriz m3(m,n, mat3);
+//	Matriz m4(m,n, mat4);
+	//Matriz m6=m1*m2;
+	Matriz m5 = m1.strassen(m2);
+	/*cout<<endl<<"Matriz m1:"<<endl;
 	~(m1);
 	cout<<endl<<"Matriz m2:"<<endl;
 	~(m2);
 	cout<<endl<<"Matriz m3:"<<endl;
-	~(m1*m2);
-	cout<<endl<<"Matriz bloque:"<<endl;
-	~(m1.matblock(2));
+	~(m3);
+	cout<<endl<<"Matriz m4:"<<endl;
+	~(m4);
+	cout<<endl<<"Matriz m*:"<<endl;
+	~(m6);*/
+	//cout<<endl<<"Matriz bloque:"<<endl;
+	~(m5);
+	
 	
 	return 0;
 }

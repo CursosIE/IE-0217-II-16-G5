@@ -121,7 +121,7 @@ void Matriz::operator~()
 		}
 }
 
-double** Matriz::mat2x2(const Matriz m2){
+Matriz Matriz::mat2x2(const Matriz m2){
 	if(this->m==2 && this->n==2 && m2.m==2 && m2.n==2){
 	double **m3 = (double **) malloc(sizeof(double *)*2);
 	for(int i=0; i<2; i++){
@@ -138,11 +138,12 @@ double** Matriz::mat2x2(const Matriz m2){
 	m3[0][1]=p3+p5;
 	m3[1][0]=p2+p4;
 	m3[1][1]=p1-p2+p3+p6;
-	return m3;
+	Matriz mr(2,2,m3);
+	return mr;
 	}
 	else{
 		cout<<"Esta función solo admite matrices 2x2"<<endl;
-		return 0;}
+		}
 }
 
 Matriz Matriz::matblock(int b){
@@ -205,4 +206,70 @@ Matriz Matriz::matblock(int b){
 			}
 		return mr;
 		}
+	}
+
+Matriz::Matriz(Matriz m1, Matriz m2, Matriz m3, Matriz m4, int len){
+	if(len==m1.m && m1.m==m2.m && m2.m==m3.m && m3.m==m4.m){
+	double **mat2 = (double **) malloc(sizeof(double *)*2*len);
+		for(int i=0; i<2*len; i++){
+        mat2[i] = (double *) malloc(sizeof(double)*2*len); 
+		}
+		Matriz mr(2*len,2*len,mat2);
+		for(int i=0; i<len; i++){
+			for(int j=0; j<len;j++){
+				mr.matrix[i][j]=m1.matrix[i][j];
+				}
+			}
+		for(int i=0; i<len; i++){
+			for(int j=len; j<2*len;j++){
+				mr.matrix[i][j]=m2.matrix[i][j-len];
+				}
+			}
+		for(int i=len; i<2*len; i++){
+			for(int j=0; j<len;j++){
+				mr.matrix[i][j]=m3.matrix[i-len][j];
+				}
+			}
+		for(int i=len; i<2*len; i++){
+			for(int j=len; j<2*len;j++){
+				mr.matrix[i][j]=m4.matrix[i-len][j-len];
+				}
+			}
+		this->m=2*len;
+		this->n=2*len;
+		this->matrix=mr.matrix;
+	}
+}
+
+Matriz Matriz::strassen(Matriz m2){
+//	if(this->n=!m2.m){cout<<"No se pueden multiplicar"<<endl;}
+//	if(matrices no son cuadradas de orden n²){aplicar Duniafunción}
+	if(this->m > 2){
+		Matriz m3;
+		m3.m=this->m;
+		m3.n=this->n;
+		m3.matrix=this->matrix;
+		Matriz a11 = m3.matblock(1);
+		Matriz a12 = m3.matblock(2);
+		Matriz a21 = m3.matblock(3);
+		Matriz a22 = m3.matblock(4);
+		Matriz b11 = m2.matblock(1);
+		Matriz b12 = m2.matblock(2);
+		Matriz b21 = m2.matblock(3);
+		Matriz b22 = m2.matblock(4);
+		Matriz c11 = a11.strassen(b11)+a12.strassen(b21);
+		Matriz c12 = a11.strassen(b12)+a12.strassen(b22);
+		Matriz c21 = a21.strassen(b11)+a22.strassen(b21);
+		Matriz c22 = a21.strassen(b12)+a22.strassen(b22);
+		Matriz mr(c11,c12,c21,c22,(this->m)/2);
+		return mr;
+		}
+	else{
+		Matriz m3;
+		m3.m=this->m;
+		m3.n=this->n;
+		m3.matrix=this->matrix;
+		return m3.mat2x2(m2);
+		}
+	
 	}
