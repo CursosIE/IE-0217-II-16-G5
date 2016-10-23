@@ -13,9 +13,9 @@ using namespace std;
 class Cuadrante{
 public:
 	// Atributos:
-	int* ci;	//coordenadas inicio
-	int* cc;	//coordenadas cierre
-	int d;		//dimension
+	int* ci;	///coordenadas de inicio
+	int* cc;	///coordenadas de cierre
+	int d;		///dimension
 
 	Cuadrante();	
 	Cuadrante(int d);

@@ -3,6 +3,7 @@
 
 Cuadrante::Cuadrante() {
 }
+///Constructor de un cuadrante
 Cuadrante::Cuadrante(int d) {
 	int* ci= new int[2];
 	ci[0]= 0;
@@ -14,18 +15,20 @@ Cuadrante::Cuadrante(int d) {
 	this->cc= cc;
 	this->d= d;
 }
+///Destructor
 Cuadrante::~Cuadrante() {
 }
 
 void Cuadrante::print() {
+	///@brief Imprime las coordenadas de inicio y cierre de un cuadrante
 	cout<<"Inicia en (fila, columna): "<<this->ci[0]<<"\t"<<this->ci[1]<<endl;
 	cout<<"Cierra en (fila, columna): "<<this->cc[0]<<"\t"<<this->cc[1]<<endl;
 	cout<<"Es de dimensión: \t"<<this->d<<endl;
 	cout<<endl;
 }
-
-//Trabaja con un objeto de tipo cuadrante (this) y devuleve puntero de tipo cuadrante: Arreglo que contiene cuatro cuadrantes
 Cuadrante* Cuadrante::dividir() {
+	///@brief Divide un cuadrante en cuatro cuadrantes
+	///@return Arreglo que contiene cuatro cuadrantes
 	int dim= this->d;
 	int d= dim/2;
 

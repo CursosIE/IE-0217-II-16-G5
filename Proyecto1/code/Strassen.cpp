@@ -5,27 +5,38 @@
 //constructores y destructor
 Strassen::Strassen() {
 }
-//Constructor de matriz tipo Strassen con contenido de ceros, d es la dimensión
+///Constructor de matriz con contenido de números aleatorios de 0 a n
+Strassen::Strassen(int f, int c, int d, int n) {
+	this->f= f;
+	this->c= c;
+	this->d= d;
+	this->coord= Cuadrante(d);
+	int** cont= contx(f, c, n); // contenido numeros aleatorios
+	this->cont= cont;
+}
+///Constructor de matriz con contenido de ceros
+Strassen::Strassen(int f, int c) {
+	this->f= f;
+	this->c= c;
+	this->cont= contnull(f, c);
+}
+///Constructor de matriz cuadrada con dimensión potencia de dos y contenido de ceros
 Strassen::Strassen(int d) {
-	this->coord= Cuadrante(d);
 	this->d= d;
-	int** c= contCero(); 
-	this->cont= c;
-}
-//Constructor de matriz tipo Strassen con contenido de números aleatorios de 0 a n
-Strassen::Strassen(int d, int n) {
 	this->coord= Cuadrante(d);
-	this->d= d;
-	int** c= contx(n); // contenido numeros aleatorios
-	this->cont= c;
+	int** cont= contnull(d); // contenido numeros aleatorios
+	this->cont= cont;
 }
+///Destructor
 Strassen::~Strassen() {
 }
 
-//obtener dimensiones de las matrices
 int** Strassen::obtdim(int a, char** entrada) {
+	///@brief Método que pertenece a la clase Strassen y que devuelve un puntero de ints 
+	///@param entrada Dimensiones desde la terminal
+    ///@return Arreglo con las dimensiones de las matrices
 	string sp, st;	//string principal y string temporal
-	char* at;	//arreglo temporal
+	char* at;		//arreglo temporal
 	int k=0, j=0, intt=0, n=0;
     int** d= new int*[2];
     d[0]= new int[2];	//dimensiones de matriz A
@@ -73,8 +84,11 @@ int** Strassen::obtdim(int a, char** entrada) {
 	return d;
 	delete[] d;
 }
-//determinar dimension adecuada 2^n. Devuelve el 2^n indicado
-int Strassen::ddn(int** dms) {	//recibe dimensiones
+
+int Strassen::ddn(int** dms) {	
+    ///@brief Determinar cual es la dimension potencia de dos adecuada  
+	///@param dms Dimensiones de las matrices
+    ///@return Dimensión correcta
 	int k=0, mg=0, n=0, d=0;	//más grande
 	bool fin= false;
 	for (int i = 0; i < 2; i++)
@@ -106,47 +120,113 @@ int Strassen::ddn(int** dms) {	//recibe dimensiones
 	}
 	return d;
 }
-//Devuelve un puntero int** con números aleatorios de 0 a n
-int** Strassen::contx(int n) {
-	int** c= new int*[this->d];
-	for(int i=0; i< this->d; i++){  //filas de a
-		c[i]= new int[this->d];
+int** Strassen::contx(int f, int c, int n) {
+	///@brief Genera contenido de una matriz 
+	///@param f cantidad de filas
+	///@param c cantidad de columnas
+	///@param n rango de números aleatorios
+    ///@return Puntero int** con números aleatorios de 0 a n
+
+	int** cont= new int*[f];
+	for(int i=0; i< f; i++){  //filas de a
+		cont[i]= new int[c];
 		
-		for(int j=0; j< this->d; j++){	//columnas de b
-			c[i][j]= rand() % n+1;
+		for(int j=0; j< c; j++){	//columnas de b
+			cont[i][j]= rand() % n+1;
 		}
 	}
-	return c;
-	delete[] c;
+	return cont;
+	for (int i = 0; i < f; i++)
+	{
+		delete[] cont[i];
+	}
+	delete[] cont;
 }
-//Devuelve un puntero int** con ceros
-int** Strassen::contCero() {
-	int** c= new int*[this->d];
-	for(int i=0; i< this->d; i++){  //filas de a
-		c[i]= new int[this->d];
+int** Strassen::contnull(int f, int c) {
+    ///@brief Genera contenido de una matriz 
+	///@param f cantidad de filas
+	///@param c cantidad de columnas
+    ///@return Puntero int** con ceros
+	int** cont= new int*[f];
+	for(int i=0; i< f; i++){  //filas de a
 		
-		for(int j=0; j< this->d; j++){	//columnas de b
-			c[i][j]= 0;
+		cont[i]= new int[c];
+		for (int j = 0; j < c; j++)
+		{
+			cont[i][j]= 0;
 		}
 	}
-	return c;
-	delete[] c;
+	return cont;
+	for (int i = 0; i < f; i++)
+	{
+		delete[] cont[i];
+	}
+	delete[] cont;
 }
-//Modifica el contenido de la matriz. La llena con ceros
+int** Strassen::contnull(int d) {
+    ///@brief Genera contenido de una matriz 
+	///@param d dimensión de la matriz
+    ///@return Puntero int** con ceros
+	int** cont= new int*[d];
+	for(int i=0; i< d; i++){  //filas de a
+		cont[i]= new int[d];
+		
+		for(int j=0; j< d; j++){	//columnas de b
+			cont[i][j]= 0;
+		}
+	}
+	return cont;
+	for (int i = 0; i < f; i++)
+	{
+		delete[] cont[i];
+	}
+	delete[] cont;
+}
+void Strassen::fill() {
+	///@brief Llena las filas y columnas faltantes con ceros 
+	int fi=0, ci=0; 
+	int** CS= new int*[this->d];
+	
+	for(int i=0; i< this->d; i++){  //filas de a
+		CS[i]= new int[this->d];
+		
+		for(int j=0; j< this->d; j++){	//columnas de b
+			if (fi<this->f && ci<this->c)
+			{
+				CS[i][j]= this->cont[fi][ci];
+				ci++;
+			}
+			else
+			{
+				CS[i][j]= 0;
+			}
+		}
+		fi++;
+		ci= 0;
+	}
+	for (int i = 0; i < f; i++)
+	{
+		delete[] this->cont[i];
+	}
+	delete[] this->cont;
+	this->cont= CS;
+}
 void Strassen::modContCero() {
+	///@brief Modifica el contenido de la matriz sustituyendolo por ceros
 	for(int i=0; i< this->d; i++){  //filas de a
 		for(int j=0; j< this->d; j++){	//columnas de b
 			this->cont[i][j]= 0;
 		}
 	}
 }
-//Modifica el contenido de la matriz. Sobreescribe contenido de un cuadrante en especifico
 void Strassen::sobreCont( int** cA, Cuadrante t, Cuadrante a) {
-	//sobreescribe el contenido de THIS. Reemplaza el contenido de this por el de A
-	//int** cA corresponde al contenido de A
-	//cuadrante a corresponde al cuadrante de A 
-	//cuadrante t corresponde al cuadrante de this 
-    //cuadrantes a y t deben tener la misma dimensión
+	///@brief Sobreescribe el contenido de la matriz en un cuadrante en especifico
+	///
+	///Reemplaza el contenido de this por el de A
+	///@param cA corresponde al contenido de A
+	///@param t corresponde al cuadrante de this 
+	///@param a corresponde al cuadrante de A 
+	//cuadrantes a y t deben tener la misma dimensión
     int n= a.ci[0];	//fila de inicio de A 
     int m= a.ci[1];	//columna de inicio de A
 	for(int i=t.ci[0]; i<= t.cc[0]; i++){  
@@ -158,8 +238,17 @@ void Strassen::sobreCont( int** cA, Cuadrante t, Cuadrante a) {
 		n++;
 	}
 }
-//Imprime el contenido de una matriz de tipo Strassen
+void Strassen::printContN() {
+	///@brief Imprime el contenido de una matriz convencional
+	for(int i=0; i< this->f; i++){  
+		for(int j=0; j< this->c; j++){	
+			cout<<this->cont[i][j]<<"\t";
+		}
+		cout<<endl;
+	}
+}
 void Strassen::printCont() {
+	///@brief Imprime el contenido de una matriz tipo Strassen
 	for(int i=0; i< this->d; i++){  
 		for(int j=0; j< this->d; j++){	
 			cout<<this->cont[i][j]<<"\t";
@@ -167,22 +256,28 @@ void Strassen::printCont() {
 		cout<<endl;
 	}
 }
-//Mult normal. Recibe dos matrices tipo Strassen que se van a multiplicar: A*B= C. Cambios se escriben en C. C es this
+
 void Strassen::mulNormal(Strassen A, Strassen B) {
-	for (int i = 0; i < A.d; i++)	//desde coordenada de inicio de A hasta coordenada de cierre de A. Filas
+    ///@brief Método convencional de multiplicación de matrices
+    ///
+    ///Se multiplica la matriz A por la matriz B, el resultado se guarda en this
+    ///@param A matriz tipo Strassen 
+    ///@param B matriz tipo Strassen 
+	for (int i = 0; i < A.f; i++)	//desde coordenada de inicio de A hasta coordenada de cierre de A. Filas
 	{
-		for (int j = 0; j < A.d; j++)	//columnas
+		for (int j = 0; j < B.c; j++)	//columnas
 		{ 
-			for (int k = 0; k < A.d; k++)
+			for (int k = 0; k < A.c; k++)
 			{
 				this->cont[i][j]+= A.cont[i][k]*B.cont[k][j];
 			}			
 		}	
 	}
 }
-//Caso base. Debe ser 2x2. Multiplico A por B y lo guardo en this
 void Strassen::casobase(Strassen A, Strassen B, Cuadrante a, Cuadrante b) {
-	
+	///@brief Caso base del algoritmo de Strassen
+	///
+	///Dimensión debe ser 2x2. Se multiplica A por B y se guarda en this
 	int p1= (A.cont[a.ci[0]][a.ci[1]] + A.cont[a.cc[0]][a.cc[1]])*(B.cont[b.ci[0]][b.ci[1]] + B.cont[b.cc[0]][b.cc[1]]);
 	int p2= (A.cont[a.cc[0]][a.ci[1]] + A.cont[a.cc[0]][a.cc[1]])*(B.cont[b.ci[0]][b.ci[1]]);
 	int p3= (A.cont[a.ci[0]][a.ci[1]])*(B.cont[b.ci[0]][b.cc[1]] - B.cont[b.cc[0]][b.cc[1]]);
@@ -190,14 +285,16 @@ void Strassen::casobase(Strassen A, Strassen B, Cuadrante a, Cuadrante b) {
 	int p5= (A.cont[a.ci[0]][a.ci[1]] + A.cont[a.ci[0]][a.cc[1]])*(B.cont[b.cc[0]][b.cc[1]]);
 	int p6= (A.cont[a.cc[0]][a.ci[1]] - A.cont[a.ci[0]][a.ci[1]])*(B.cont[b.ci[0]][b.ci[1]] + B.cont[b.ci[0]][b.cc[1]]);
 	int p7= (A.cont[a.ci[0]][a.cc[1]] - A.cont[a.cc[0]][a.cc[1]])*(B.cont[b.cc[0]][b.ci[1]] + B.cont[b.cc[0]][b.cc[1]]);
-
+    
 	this->cont[a.ci[0]][b.ci[1]]+= p1 + p4 - p5 + p7;
 	this->cont[a.ci[0]][b.cc[1]]+= p3 + p5;
 	this->cont[a.cc[0]][b.ci[1]]+= p2 + p4;
 	this->cont[a.cc[0]][b.cc[1]]+= p1 - p2 + p3 + p6;
 }
-//RECURSIVIDAD. Multiplicar cuadrantes. Cambios se guardan this
 void Strassen::mulCuad(Strassen A, Strassen B, Cuadrante a, Cuadrante b) {
+	///@brief Caso recursivo donde se multiplican los cuadrantes especificados de cada matriz
+	///
+	///El resultado se guarda en this	
 	int d= a.d;
 	if (d<=2)
 	{
@@ -230,10 +327,9 @@ void Strassen::mulCuad(Strassen A, Strassen B, Cuadrante a, Cuadrante b) {
 		delete[] CB;
 	}
 }
-//Obtiene un cuadrante en especifico de la multiplicación de A por B y lo guarda en this
-//Recibe cual cuadrante desea obtener
 void Strassen::cuadx(Strassen A, Strassen B, Cuadrante a, Cuadrante b, int c) {
-	
+	///@brief Obtiene un cuadrante en especifico de la multiplicación A por B y lo guarda en this
+	///param c cuadrante que se desea obtener
 	int d= a.d;
 	if (d<=2)
 	{
@@ -264,12 +360,8 @@ void Strassen::cuadx(Strassen A, Strassen B, Cuadrante a, Cuadrante b, int c) {
 			BT.sobreCont(B.cont, AT.coord, CB[3]);
 			this->mulCuad(AT, BT, AT.coord, BT.coord);
 			
-			delete[] AT.cont;
-			delete[] AT.coord.ci;
-			delete[] AT.coord.cc;
-			delete[] BT.cont;
-			delete[] BT.coord.ci;
-			delete[] BT.coord.cc;
+			AT.erase();
+			BT.erase();
 		}
 	    else if (c==3)	//devuelve tercer cuadrante
 		{
@@ -284,12 +376,8 @@ void Strassen::cuadx(Strassen A, Strassen B, Cuadrante a, Cuadrante b, int c) {
 			BT.sobreCont(B.cont, AT.coord, CB[2]);
 			this->mulCuad(AT, BT, AT.coord, BT.coord);
 			
-			delete[] AT.cont;
-			delete[] AT.coord.ci;
-			delete[] AT.coord.cc;
-			delete[] BT.cont;
-			delete[] BT.coord.ci;
-			delete[] BT.coord.cc;
+			AT.erase();
+			BT.erase();
 		}
 	    else if (c==4)	//devuelve cuarto cuadrante
 		{
@@ -304,13 +392,9 @@ void Strassen::cuadx(Strassen A, Strassen B, Cuadrante a, Cuadrante b, int c) {
 			BT.sobreCont(B.cont, AT.coord, CB[3]);
 			this->mulCuad(AT, BT, AT.coord, BT.coord);
 			
-			delete B.cont;	//Libera el espacio de la matriz B
-			delete[] AT.cont;
-			delete[] AT.coord.ci;
-			delete[] AT.coord.cc;
-			delete[] BT.cont;
-			delete[] BT.coord.ci;
-			delete[] BT.coord.cc;
+			AT.erase();
+			BT.erase();
+			B.erase();	//Libera el espacio de la matriz B
 		}
 		
 		for (int i = 0; i < 4; i++)
@@ -324,17 +408,16 @@ void Strassen::cuadx(Strassen A, Strassen B, Cuadrante a, Cuadrante b, int c) {
 		delete[] CB;
 	}
 }
-//Multiplica A por B y sobreescribe a A
-void Strassen::mulSt(Strassen A, Strassen B) {	
+void Strassen::mulSt(Strassen A, Strassen B) {
+	///@brief Multiplica A por B y sobreescribe a la matriz A	
 	int d= A.d;
 	if (d<=2)
 	{
 		Strassen C= Strassen(d);	//temporal
 		C.casobase(A, B, A.coord, B.coord);
 		A.sobreCont(C.cont, A.coord, C.coord);
-		delete[] C.cont;
-		delete[] C.coord.ci;
-		delete[] C.coord.cc;
+		
+		C.erase();
 	}
 	else
 	{
@@ -372,33 +455,27 @@ void Strassen::mulSt(Strassen A, Strassen B) {
 			delete[] CA[i].cc;
 		}
 		delete[] CA;
-		delete[] t.cont;
-		delete[] t.coord.ci;
-		delete[] t.coord.cc;
-		delete[] tt.cont;
-		delete[] tt.coord.ci;
-		delete[] tt.coord.cc;
+		t.erase();
+		tt.erase();
     }
 }
-
-//libera espacio de filas en especifico
-//recibe la primera fila que se desea liberar y la última
-void Strassen::deleteRows(int fi, int fc) {
-	for (int i = fi; i <=fc ; i++)
+void Strassen::eraseN() {
+	///@brief Libera el espacio correspondiente al contenido y el cuadrante de la matriz
+	for (int i = 0; i < this->f ; i++)
 	{
 		delete[] this->cont[i];
 	}
+	delete[] this->cont;
+	delete[] this->coord.ci;
+	delete[] this->coord.cc;
 }
-
-void Strassen::operator+=(Strassen C) {
-	//suma de matrices no convencional
-	Cuadrante coordA= this->coord;
-	Cuadrante coordC= C.coord;
-	for (int i = coordA.ci[0]; i <= coordA.cc[0]; i++)
+void Strassen::erase() {
+    ///@brief Libera el espacio correspondiente al contenido y el cuadrante de una matriz tipo Strassen
+	for (int i = 0; i <this->d ; i++)
 	{
-		for (int j = coordA.ci[1]; j <= coordA.cc[1]; j++)
-		{ 		
-			this->cont[i][j]+= C.cont[i][j];		
-		}	
+		delete[] this->cont[i];
 	}
+	delete[] this->cont;
+	delete[] this->coord.ci;
+	delete[] this->coord.cc;
 }
