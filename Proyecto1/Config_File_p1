@@ -1,4 +1,4 @@
-# ARCHIVO DE CONFIGURACIÓN LAB 2
+# ARCHIVO DE CONFIGURACIÓN PROYECTO 1
 
 # Doxyfile 1.8.8
 # This file describes the settings to be used by the documentation system
@@ -8,7 +8,6 @@
 # For lists, items can also be appended using:
 # TAG += value [value, ...]
 # Values that contain spaces should be placed between quotes (\" \").
-
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
@@ -19,7 +18,7 @@ PROJECT_NAME           = "Proyecto_1"
 
 PROJECT_NUMBER         = 1.0	
 
-PROJECT_BRIEF          = "Algoritmo de Strassen"
+PROJECT_BRIEF          = "Implementación del algoritmo de Strassen"
 
 PROJECT_LOGO           =
 
