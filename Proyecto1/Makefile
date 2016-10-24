@@ -9,5 +9,12 @@ doc:
 	doxygen Config_File_p1
 	cd ./doxygen/latex/; make
 	cd ./doxygen/latex/; xdg-open refman.pdf
+	clear
 clean:
 	rm -rf doxygen
+pdf:
+	cd ./reporte/; pdflatex project_1.tex
+	cd ./reporte/; pdflatex project_1.tex
+	cd ./reporte/; rm *.aux *.log *.out *.toc *.lof
+	cd ./reporte/; xdg-open project_1.pdf
+	clear
