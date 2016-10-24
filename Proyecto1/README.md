@@ -28,3 +28,5 @@ EmmaDu
 	opción 2: Abrir y correr el archivo Config_File_p1 con doxywizard
 	
 6) Para eliminar la documentación creada de doxygen (una vez vista): make clean
+
+7) Para generar el reporte: make pdf
