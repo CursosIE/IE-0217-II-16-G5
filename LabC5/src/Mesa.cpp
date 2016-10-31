@@ -114,38 +114,50 @@ void Mesa::partida(Fila &fila){
 		}
 	if(espera==0||espaciosdisp==0){
 		if(Jugador1.activo==true){
+		cout<<"El jugador 1 come un: "; ~mazo.deck[mazo.cantcart-1];
 		Jugador1.comer(mazo);
+		cout<<"El jugador 1 come un: "; ~mazo.deck[mazo.cantcart-1];
 		Jugador1.comer(mazo);
 		}
 		if(Jugador2.activo==true){
+		cout<<"El jugador 2 come un: "; ~mazo.deck[mazo.cantcart-1];
 		Jugador2.comer(mazo);
+		cout<<"El jugador 2 come un: "; ~mazo.deck[mazo.cantcart-1];
 		Jugador2.comer(mazo);
 		}
 		if(Jugador3.activo==true){
+		cout<<"El jugador 3 come un: "; ~mazo.deck[mazo.cantcart-1];
 		Jugador3.comer(mazo);
+		cout<<"El jugador 3 come un: "; ~mazo.deck[mazo.cantcart-1];
 		Jugador3.comer(mazo);
 		}
 		int lose=0;
 		while(Jugador1.activo==true||Jugador2.activo==true||Jugador3.activo==true){
 			if(Jugador1.activo==true && Jugador1.puntos>=19){
+				cout<<endl;
 				~Jugador1; 
 				Jugador1.activo=false;
 				}
 			if(Jugador2.activo==true && Jugador2.puntos>=19){
+				cout<<endl;
 				~Jugador2; 
 				Jugador2.activo=false;
 				}
 			if(Jugador3.activo==true && Jugador3.puntos>=19){
+				cout<<endl;
 				~Jugador3; 
 				Jugador3.activo=false;
 				}
 			if(Jugador1.activo==true){
+         		cout<<"El jugador 1 come un: "; ~mazo.deck[mazo.cantcart-1];
 				Jugador1.comer(mazo);
 				}
 			if(Jugador2.activo==true){
+    			cout<<"El jugador 2 come un: "; ~mazo.deck[mazo.cantcart-1];
 				Jugador2.comer(mazo);
 				}
 			if(Jugador3.activo==true){
+				cout<<"El jugador 3 come un: "; ~mazo.deck[mazo.cantcart-1];
 				Jugador3.comer(mazo);
 				}
 			}
