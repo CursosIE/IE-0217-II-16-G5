@@ -1,0 +1,6 @@
+<map id="Mesa::partida" name="Mesa::partida">
+<area shape="rect" id="node2" href="$class_mazo.html#ad73b15de8ae06e4e7aaecd97626bbe21" title="Método que de forma aleatoria ordena a las cartas del objeto mazo. " alt="" coords="160,5,261,32"/>
+<area shape="rect" id="node3" href="$class_fila.html#a56d36d67fb631d3a1ec48bf3b6e55e40" title="Método que extrae el último elemento de la cola fila ordenada. " alt="" coords="175,56,247,83"/>
+<area shape="rect" id="node4" href="$class_jugador.html#a08b73142c7216db984dede56ccb15d1a" title="Método de la clase jugador para comer carta de un mazo. " alt="" coords="155,107,267,133"/>
+<area shape="rect" id="node5" href="$class_mazo.html#a31ede195584d6c9b6046e1a409b95540" title="Método que hace un pop al mazo, removiendo la carta que está arriba en el strack. ..." alt="" coords="315,107,397,133"/>
+</map>
