@@ -1,0 +1,267 @@
+\hypertarget{class_graph}{\section{Graph$<$ T $>$ Class Template Reference}
+\label{class_graph}\index{Graph$<$ T $>$@{Graph$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+
+
+Collaboration diagram for Graph$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_graph__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_a8c626ac04708ae490bba05e1e713cda2}{Graph} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase grafo. \end{DoxyCompactList}\item 
+\hyperlink{class_graph_a585e445e85bb506fc9b6687c15b0fbd1}{Graph} (int si, \hyperlink{class_node}{Node}$<$ T $>$ $\ast$r)
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado de la clase grafo. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_graph_abed0ed996798032aa7dca0069a59b9d6}{$\sim$\+Graph} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase grafo. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a098e38adb75a1ede80b702ae311d3c43}{addvert} (\hyperlink{class_node}{Node}$<$ T $>$ n)
+\begin{DoxyCompactList}\small\item\em Funcion que crea un vertice con tipo de dato generico. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a8051c17deea5499aff88e199eb7528a6}{removevert} (int n)
+\begin{DoxyCompactList}\small\item\em Funcion que remueve un vertice. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_aa0b173e1e6ba14e5290e32934a4dbc53}{addedge} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Funcion que cra una arista. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a43b6c33a27b9315e1559c2c611e86b47}{deleteedge} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Funcion que elimina una arista. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_afb25283ef93b65359d82762c62dc2f27}{operator$\sim$} ()
+\begin{DoxyCompactList}\small\item\em Funcion que imprime los datos del grafo. \end{DoxyCompactList}\item 
+int \hyperlink{class_graph_af0776470865242ef040ecbb93226667f}{adjuv} (int n, bool $\ast$visvec)
+\begin{DoxyCompactList}\small\item\em Funcion que retorna los vertices adjuntos a un vertice especifico dado. \end{DoxyCompactList}\item 
+int \hyperlink{class_graph_a000c1e49d9bf261be1a4f4046a92e4cf}{adjuvcheck} (int n, bool $\ast$visvec)
+\begin{DoxyCompactList}\small\item\em Funcion que verifica si un vertice posee vertices adjuntos. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a361095b62eb33806ed2df3608911c8c9}{bfs} ()
+\begin{DoxyCompactList}\small\item\em Funcion que imprime el camino a seguir ara una búsqueda por ancho. \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_ae322c2f16b2dfd159e41ee7649899f0f}{dfs} ()
+\begin{DoxyCompactList}\small\item\em Funcion que ejecuta una busqueda de profundidad en el grafo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_graph_a592a0bf5252e291cac9beddc3ef0dce4}{size}
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_graph_a0f18c16458fe766ab6fff7c13b2c896e}{vertex}
+\item 
+bool $\ast$$\ast$ \hyperlink{class_graph_a984840929138988e3fb622fffc6b22d1}{edges}
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$$\ast$ \hyperlink{class_graph_aa4d188bead6f84478f1f809c09529195}{arist}
+\item 
+int \hyperlink{class_graph_a5ac45f979baab5c953444780f03aca55}{aristnum}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graph_a8c626ac04708ae490bba05e1e713cda2}{\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Graph}$<$ T $>$\+::{\bf Graph} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a8c626ac04708ae490bba05e1e713cda2}
+
+
+Constructor de la clase grafo. 
+
+\hypertarget{class_graph_a585e445e85bb506fc9b6687c15b0fbd1}{\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Graph}$<$ T $>$\+::{\bf Graph} (
+\begin{DoxyParamCaption}
+\item[{int}]{si, }
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a585e445e85bb506fc9b6687c15b0fbd1}
+
+
+Constructor sobrecargado de la clase grafo. 
+
+\hypertarget{class_graph_abed0ed996798032aa7dca0069a59b9d6}{\index{Graph@{Graph}!````~Graph@{$\sim$\+Graph}}
+\index{````~Graph@{$\sim$\+Graph}!Graph@{Graph}}
+\subsubsection[{$\sim$\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ virtual {\bf Graph}$<$ T $>$\+::$\sim${\bf Graph} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_graph_abed0ed996798032aa7dca0069a59b9d6}
+
+
+Destructor de la clase grafo. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graph_aa0b173e1e6ba14e5290e32934a4dbc53}{\index{Graph@{Graph}!addedge@{addedge}}
+\index{addedge@{addedge}!Graph@{Graph}}
+\subsubsection[{addedge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Graph}$<$ T $>$\+::addedge (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_aa0b173e1e6ba14e5290e32934a4dbc53}
+
+
+Funcion que cra una arista. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_graph_aa0b173e1e6ba14e5290e32934a4dbc53_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_graph_a098e38adb75a1ede80b702ae311d3c43}{\index{Graph@{Graph}!addvert@{addvert}}
+\index{addvert@{addvert}!Graph@{Graph}}
+\subsubsection[{addvert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Graph}$<$ T $>$\+::addvert (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a098e38adb75a1ede80b702ae311d3c43}
+
+
+Funcion que crea un vertice con tipo de dato generico. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_graph_a098e38adb75a1ede80b702ae311d3c43_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_graph_af0776470865242ef040ecbb93226667f}{\index{Graph@{Graph}!adjuv@{adjuv}}
+\index{adjuv@{adjuv}!Graph@{Graph}}
+\subsubsection[{adjuv}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Graph}$<$ T $>$\+::adjuv (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{bool $\ast$}]{visvec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_af0776470865242ef040ecbb93226667f}
+
+
+Funcion que retorna los vertices adjuntos a un vertice especifico dado. 
+
+\hypertarget{class_graph_a000c1e49d9bf261be1a4f4046a92e4cf}{\index{Graph@{Graph}!adjuvcheck@{adjuvcheck}}
+\index{adjuvcheck@{adjuvcheck}!Graph@{Graph}}
+\subsubsection[{adjuvcheck}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Graph}$<$ T $>$\+::adjuvcheck (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{bool $\ast$}]{visvec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a000c1e49d9bf261be1a4f4046a92e4cf}
+
+
+Funcion que verifica si un vertice posee vertices adjuntos. 
+
+\hypertarget{class_graph_a361095b62eb33806ed2df3608911c8c9}{\index{Graph@{Graph}!bfs@{bfs}}
+\index{bfs@{bfs}!Graph@{Graph}}
+\subsubsection[{bfs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Graph}$<$ T $>$\+::bfs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a361095b62eb33806ed2df3608911c8c9}
+
+
+Funcion que imprime el camino a seguir ara una búsqueda por ancho. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_graph_a361095b62eb33806ed2df3608911c8c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_graph_a43b6c33a27b9315e1559c2c611e86b47}{\index{Graph@{Graph}!deleteedge@{deleteedge}}
+\index{deleteedge@{deleteedge}!Graph@{Graph}}
+\subsubsection[{deleteedge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Graph}$<$ T $>$\+::deleteedge (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a43b6c33a27b9315e1559c2c611e86b47}
+
+
+Funcion que elimina una arista. 
+
+\hypertarget{class_graph_ae322c2f16b2dfd159e41ee7649899f0f}{\index{Graph@{Graph}!dfs@{dfs}}
+\index{dfs@{dfs}!Graph@{Graph}}
+\subsubsection[{dfs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Graph}$<$ T $>$\+::dfs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_ae322c2f16b2dfd159e41ee7649899f0f}
+
+
+Funcion que ejecuta una busqueda de profundidad en el grafo. 
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_graph_ae322c2f16b2dfd159e41ee7649899f0f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_graph_afb25283ef93b65359d82762c62dc2f27}{\index{Graph@{Graph}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Graph@{Graph}}
+\subsubsection[{operator$\sim$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Graph}$<$ T $>$\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_afb25283ef93b65359d82762c62dc2f27}
+
+
+Funcion que imprime los datos del grafo. 
+
+\hypertarget{class_graph_a8051c17deea5499aff88e199eb7528a6}{\index{Graph@{Graph}!removevert@{removevert}}
+\index{removevert@{removevert}!Graph@{Graph}}
+\subsubsection[{removevert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Graph}$<$ T $>$\+::removevert (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graph_a8051c17deea5499aff88e199eb7528a6}
+
+
+Funcion que remueve un vertice. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graph_aa4d188bead6f84478f1f809c09529195}{\index{Graph@{Graph}!arist@{arist}}
+\index{arist@{arist}!Graph@{Graph}}
+\subsubsection[{arist}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Node}$<$T$>$$\ast$$\ast$ {\bf Graph}$<$ T $>$\+::arist}}\label{class_graph_aa4d188bead6f84478f1f809c09529195}
+\hypertarget{class_graph_a5ac45f979baab5c953444780f03aca55}{\index{Graph@{Graph}!aristnum@{aristnum}}
+\index{aristnum@{aristnum}!Graph@{Graph}}
+\subsubsection[{aristnum}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Graph}$<$ T $>$\+::aristnum}}\label{class_graph_a5ac45f979baab5c953444780f03aca55}
+\hypertarget{class_graph_a984840929138988e3fb622fffc6b22d1}{\index{Graph@{Graph}!edges@{edges}}
+\index{edges@{edges}!Graph@{Graph}}
+\subsubsection[{edges}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool$\ast$$\ast$ {\bf Graph}$<$ T $>$\+::edges}}\label{class_graph_a984840929138988e3fb622fffc6b22d1}
+\hypertarget{class_graph_a592a0bf5252e291cac9beddc3ef0dce4}{\index{Graph@{Graph}!size@{size}}
+\index{size@{size}!Graph@{Graph}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Graph}$<$ T $>$\+::size}}\label{class_graph_a592a0bf5252e291cac9beddc3ef0dce4}
+\hypertarget{class_graph_a0f18c16458fe766ab6fff7c13b2c896e}{\index{Graph@{Graph}!vertex@{vertex}}
+\index{vertex@{vertex}!Graph@{Graph}}
+\subsubsection[{vertex}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Node}$<$T$>$$\ast$ {\bf Graph}$<$ T $>$\+::vertex}}\label{class_graph_a0f18c16458fe766ab6fff7c13b2c896e}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_graph_8h}{Graph.\+h}\end{DoxyCompactItemize}
