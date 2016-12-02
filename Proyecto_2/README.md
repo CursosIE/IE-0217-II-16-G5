@@ -1,6 +1,6 @@
 EmmaDu
 
-1)	Para compilar y ejecutar el código: make
+1)	Para compilar y ejecutar el código: make o make code
 
 2)	Para generar la documentación con Doxygen: make doc
 
