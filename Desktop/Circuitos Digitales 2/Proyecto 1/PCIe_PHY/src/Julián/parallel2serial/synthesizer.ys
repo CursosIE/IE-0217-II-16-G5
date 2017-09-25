@@ -1,0 +1,14 @@
+read_verilog parallel2serial.v
+hierarchy -check -top parallel2serial
+
+proc; opt; fsm; opt; memory; opt; techmap; opt;
+
+dfflibmap -liberty cmos_cells.lib
+
+abc -liberty cmos_cells.lib
+
+clean
+
+show -notitle -format pdf -prefix p2s_diagram -lib cmos_cells.v
+
+write_verilog -noattr p2s_sintetizado.v

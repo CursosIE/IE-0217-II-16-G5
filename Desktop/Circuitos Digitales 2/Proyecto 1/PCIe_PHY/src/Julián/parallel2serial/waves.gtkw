@@ -1,0 +1,23 @@
+[*]
+[*] GTKWave Analyzer v3.3.62 (w)1999-2014 BSI
+[*] Sun Sep 24 23:59:37 2017
+[*]
+[dumpfile] "/home/julianmoruav/Documents/Digitales2/PCIe_PHY/src/parallel2serial/config_waves.vcd"
+[dumpfile_mtime] "Sun Sep 24 23:56:02 2017"
+[dumpfile_size] 2399
+[savefile] "/home/julianmoruav/Documents/Digitales2/PCIe_PHY/src/parallel2serial/waves.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-12.156878 11940 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 218
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 143
+@29
+testbench.w_clk
+@28
+testbench.w_10b[9:0]
+testbench.w_1b
+[pattern_trace] 1
+[pattern_trace] 0
