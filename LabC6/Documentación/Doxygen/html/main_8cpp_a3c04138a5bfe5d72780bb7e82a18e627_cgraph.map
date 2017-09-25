@@ -1,0 +1,6 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$class_graph.html#a098e38adb75a1ede80b702ae311d3c43" title="Funcion que crea un vertice con tipo de dato generico. " alt="" coords="107,5,215,32"/>
+<area shape="rect" id="node3" href="$class_graph.html#aa0b173e1e6ba14e5290e32934a4dbc53" title="Funcion que cra una arista. " alt="" coords="104,56,219,83"/>
+<area shape="rect" id="node4" href="$class_graph.html#ae322c2f16b2dfd159e41ee7649899f0f" title="Funcion que ejecuta una busqueda de profundidad en el grafo. " alt="" coords="120,107,203,133"/>
+<area shape="rect" id="node5" href="$class_graph.html#a361095b62eb33806ed2df3608911c8c9" title="Funcion que imprime el camino a seguir ara una búsqueda por ancho. " alt="" coords="120,157,203,184"/>
+</map>

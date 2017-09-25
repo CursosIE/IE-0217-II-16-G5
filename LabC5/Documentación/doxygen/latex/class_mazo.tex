@@ -1,0 +1,148 @@
+\hypertarget{class_mazo}{\section{Mazo Class Reference}
+\label{class_mazo}\index{Mazo@{Mazo}}
+}
+
+
+{\ttfamily \#include $<$Mazo.\+h$>$}
+
+
+
+Collaboration diagram for Mazo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{class_mazo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mazo_a93eaa35af9ad42840c3a37d4054ba17d}{Mazo} ()
+\begin{DoxyCompactList}\small\item\em Constructor básico de clase \hyperlink{class_mazo}{Mazo}. \end{DoxyCompactList}\item 
+\hyperlink{class_mazo_afa6b84ca154491f3a3258c306cffdda3}{Mazo} (string nombre, string palo, int valor)
+\item 
+void \hyperlink{class_mazo_ad73b15de8ae06e4e7aaecd97626bbe21}{barajar} ()
+\begin{DoxyCompactList}\small\item\em Método que de forma aleatoria ordena a las cartas del objeto mazo. \end{DoxyCompactList}\item 
+\hyperlink{class_carta}{Carta} \hyperlink{class_mazo_a31ede195584d6c9b6046e1a409b95540}{pop} (bool cond)
+\begin{DoxyCompactList}\small\item\em Método que hace un pop al mazo, removiendo la carta que está arriba en el strack. \end{DoxyCompactList}\item 
+\hyperlink{class_mazo_a2ce07ca90c706e6454ac54d727d3da2a}{$\sim$\+Mazo} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase mazo. \end{DoxyCompactList}\item 
+void \hyperlink{class_mazo_a3d2974fd7edccb74895d66ccb5dc078a}{operator$\sim$} ()
+\begin{DoxyCompactList}\small\item\em Método de print para la clase mazo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_carta}{Carta} $\ast$ \hyperlink{class_mazo_a695987bdf77145b16494fa8dbd606d11}{deck}
+\item 
+int \hyperlink{class_mazo_af10f2aeda8faed14cbb7b0ad9febd126}{cantcart}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mazo_a93eaa35af9ad42840c3a37d4054ba17d}{\index{Mazo@{Mazo}!Mazo@{Mazo}}
+\index{Mazo@{Mazo}!Mazo@{Mazo}}
+\subsubsection[{Mazo}]{\setlength{\rightskip}{0pt plus 5cm}Mazo\+::\+Mazo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mazo_a93eaa35af9ad42840c3a37d4054ba17d}
+
+
+Constructor básico de clase \hyperlink{class_mazo}{Mazo}. 
+
+\hypertarget{class_mazo_afa6b84ca154491f3a3258c306cffdda3}{\index{Mazo@{Mazo}!Mazo@{Mazo}}
+\index{Mazo@{Mazo}!Mazo@{Mazo}}
+\subsubsection[{Mazo}]{\setlength{\rightskip}{0pt plus 5cm}Mazo\+::\+Mazo (
+\begin{DoxyParamCaption}
+\item[{string}]{nombre, }
+\item[{string}]{palo, }
+\item[{int}]{valor}
+\end{DoxyParamCaption}
+)}}\label{class_mazo_afa6b84ca154491f3a3258c306cffdda3}
+\hypertarget{class_mazo_a2ce07ca90c706e6454ac54d727d3da2a}{\index{Mazo@{Mazo}!````~Mazo@{$\sim$\+Mazo}}
+\index{````~Mazo@{$\sim$\+Mazo}!Mazo@{Mazo}}
+\subsubsection[{$\sim$\+Mazo}]{\setlength{\rightskip}{0pt plus 5cm}Mazo\+::$\sim$\+Mazo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mazo_a2ce07ca90c706e6454ac54d727d3da2a}
+
+
+Destructor de la clase mazo. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mazo_ad73b15de8ae06e4e7aaecd97626bbe21}{\index{Mazo@{Mazo}!barajar@{barajar}}
+\index{barajar@{barajar}!Mazo@{Mazo}}
+\subsubsection[{barajar}]{\setlength{\rightskip}{0pt plus 5cm}void Mazo\+::barajar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mazo_ad73b15de8ae06e4e7aaecd97626bbe21}
+
+
+Método que de forma aleatoria ordena a las cartas del objeto mazo. 
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_mazo_ad73b15de8ae06e4e7aaecd97626bbe21_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_mazo_a3d2974fd7edccb74895d66ccb5dc078a}{\index{Mazo@{Mazo}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Mazo@{Mazo}}
+\subsubsection[{operator$\sim$}]{\setlength{\rightskip}{0pt plus 5cm}void Mazo\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mazo_a3d2974fd7edccb74895d66ccb5dc078a}
+
+
+Método de print para la clase mazo. 
+
+\hypertarget{class_mazo_a31ede195584d6c9b6046e1a409b95540}{\index{Mazo@{Mazo}!pop@{pop}}
+\index{pop@{pop}!Mazo@{Mazo}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Carta} Mazo\+::pop (
+\begin{DoxyParamCaption}
+\item[{bool}]{cond}
+\end{DoxyParamCaption}
+)}}\label{class_mazo_a31ede195584d6c9b6046e1a409b95540}
+
+
+Método que hace un pop al mazo, removiendo la carta que está arriba en el strack. 
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mazo_a31ede195584d6c9b6046e1a409b95540_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_mazo_af10f2aeda8faed14cbb7b0ad9febd126}{\index{Mazo@{Mazo}!cantcart@{cantcart}}
+\index{cantcart@{cantcart}!Mazo@{Mazo}}
+\subsubsection[{cantcart}]{\setlength{\rightskip}{0pt plus 5cm}int Mazo\+::cantcart}}\label{class_mazo_af10f2aeda8faed14cbb7b0ad9febd126}
+\hypertarget{class_mazo_a695987bdf77145b16494fa8dbd606d11}{\index{Mazo@{Mazo}!deck@{deck}}
+\index{deck@{deck}!Mazo@{Mazo}}
+\subsubsection[{deck}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Carta}$\ast$ Mazo\+::deck}}\label{class_mazo_a695987bdf77145b16494fa8dbd606d11}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/emanuel/\+Desktop/\+Labs/\+Lab\+C5/src/\hyperlink{_mazo_8h}{Mazo.\+h}\item 
+/home/emanuel/\+Desktop/\+Labs/\+Lab\+C5/src/\hyperlink{_mazo_8cpp}{Mazo.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,207 @@
+\hypertarget{class_fila}{\section{Fila Class Reference}
+\label{class_fila}\index{Fila@{Fila}}
+}
+
+
+{\ttfamily \#include $<$Fila.\+h$>$}
+
+
+
+Collaboration diagram for Fila\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{class_fila__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fila_ad758c612ef929ffb32cdceb442a5e6a5}{Fila} ()
+\begin{DoxyCompactList}\small\item\em Constructor básico de la clase \hyperlink{class_fila}{Fila}. \end{DoxyCompactList}\item 
+\hyperlink{class_fila_a2b120e186a1e620ee2c6bacf2c0ea44c}{Fila} (char $\ast$\hyperlink{class_fila_a36a3d7e1492ea5bc367a23f6af9d1ce7}{fila})
+\begin{DoxyCompactList}\small\item\em Constructor con características de la clase \hyperlink{class_fila}{Fila}. \end{DoxyCompactList}\item 
+\hyperlink{class_fila_af747f8a50e93b382c78e0576a5b40426}{$\sim$\+Fila} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \hyperlink{class_fila}{Fila}. \end{DoxyCompactList}\item 
+void \hyperlink{class_fila_a1b4a951498a56359211cc3334050c362}{salas} ()
+\begin{DoxyCompactList}\small\item\em Método de la clase fila que crea salas de espera en las cuales agrupa a su contenido según su tipo. \end{DoxyCompactList}\item 
+void \hyperlink{class_fila_a37535ed9d5d95be4c8c06f216818f7bd}{ord} ()
+\begin{DoxyCompactList}\small\item\em Método que ordena la fila según la prioridad. \end{DoxyCompactList}\item 
+void \hyperlink{class_fila_a329402e2861273f0b15c23a080a7ff3b}{operator$\sim$} ()
+\begin{DoxyCompactList}\small\item\em Método de impresión para la clase \hyperlink{class_fila}{Fila}. \end{DoxyCompactList}\item 
+char \hyperlink{class_fila_a56d36d67fb631d3a1ec48bf3b6e55e40}{pop} (bool cond)
+\begin{DoxyCompactList}\small\item\em Método que extrae el último elemento de la cola fila ordenada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{class_fila_a36a3d7e1492ea5bc367a23f6af9d1ce7}{fila}
+\item 
+char $\ast$ \hyperlink{class_fila_ae89d6f3b865cf2e4fb66cb793df4b9d6}{filord}
+\item 
+int \hyperlink{class_fila_a8da3061b2ff7c7a9c93571383c345294}{filen}
+\item 
+int \hyperlink{class_fila_a8c0087eed7062cb6646d380727e1f8ad}{E}
+\item 
+int \hyperlink{class_fila_aa22383da45e0e0292cc7d137af754812}{T}
+\item 
+int \hyperlink{class_fila_aee0859c7d7a52dc7436f7ff899ee0e58}{D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_fila_ad758c612ef929ffb32cdceb442a5e6a5}{\index{Fila@{Fila}!Fila@{Fila}}
+\index{Fila@{Fila}!Fila@{Fila}}
+\subsubsection[{Fila}]{\setlength{\rightskip}{0pt plus 5cm}Fila\+::\+Fila (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_fila_ad758c612ef929ffb32cdceb442a5e6a5}
+
+
+Constructor básico de la clase \hyperlink{class_fila}{Fila}. 
+
+\hypertarget{class_fila_a2b120e186a1e620ee2c6bacf2c0ea44c}{\index{Fila@{Fila}!Fila@{Fila}}
+\index{Fila@{Fila}!Fila@{Fila}}
+\subsubsection[{Fila}]{\setlength{\rightskip}{0pt plus 5cm}Fila\+::\+Fila (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fila}
+\end{DoxyParamCaption}
+)}}\label{class_fila_a2b120e186a1e620ee2c6bacf2c0ea44c}
+
+
+Constructor con características de la clase \hyperlink{class_fila}{Fila}. 
+
+\hypertarget{class_fila_af747f8a50e93b382c78e0576a5b40426}{\index{Fila@{Fila}!````~Fila@{$\sim$\+Fila}}
+\index{````~Fila@{$\sim$\+Fila}!Fila@{Fila}}
+\subsubsection[{$\sim$\+Fila}]{\setlength{\rightskip}{0pt plus 5cm}Fila\+::$\sim$\+Fila (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_fila_af747f8a50e93b382c78e0576a5b40426}
+
+
+Destructor de la clase \hyperlink{class_fila}{Fila}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_fila_a329402e2861273f0b15c23a080a7ff3b}{\index{Fila@{Fila}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Fila@{Fila}}
+\subsubsection[{operator$\sim$}]{\setlength{\rightskip}{0pt plus 5cm}void Fila\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_fila_a329402e2861273f0b15c23a080a7ff3b}
+
+
+Método de impresión para la clase \hyperlink{class_fila}{Fila}. 
+
+\hypertarget{class_fila_a37535ed9d5d95be4c8c06f216818f7bd}{\index{Fila@{Fila}!ord@{ord}}
+\index{ord@{ord}!Fila@{Fila}}
+\subsubsection[{ord}]{\setlength{\rightskip}{0pt plus 5cm}void Fila\+::ord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_fila_a37535ed9d5d95be4c8c06f216818f7bd}
+
+
+Método que ordena la fila según la prioridad. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_fila_a37535ed9d5d95be4c8c06f216818f7bd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_fila_a37535ed9d5d95be4c8c06f216818f7bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_fila_a56d36d67fb631d3a1ec48bf3b6e55e40}{\index{Fila@{Fila}!pop@{pop}}
+\index{pop@{pop}!Fila@{Fila}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}char Fila\+::pop (
+\begin{DoxyParamCaption}
+\item[{bool}]{cond}
+\end{DoxyParamCaption}
+)}}\label{class_fila_a56d36d67fb631d3a1ec48bf3b6e55e40}
+
+
+Método que extrae el último elemento de la cola fila ordenada. 
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_fila_a56d36d67fb631d3a1ec48bf3b6e55e40_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_fila_a1b4a951498a56359211cc3334050c362}{\index{Fila@{Fila}!salas@{salas}}
+\index{salas@{salas}!Fila@{Fila}}
+\subsubsection[{salas}]{\setlength{\rightskip}{0pt plus 5cm}void Fila\+::salas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_fila_a1b4a951498a56359211cc3334050c362}
+
+
+Método de la clase fila que crea salas de espera en las cuales agrupa a su contenido según su tipo. 
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_fila_a1b4a951498a56359211cc3334050c362_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_fila_aee0859c7d7a52dc7436f7ff899ee0e58}{\index{Fila@{Fila}!D@{D}}
+\index{D@{D}!Fila@{Fila}}
+\subsubsection[{D}]{\setlength{\rightskip}{0pt plus 5cm}int Fila\+::\+D}}\label{class_fila_aee0859c7d7a52dc7436f7ff899ee0e58}
+\hypertarget{class_fila_a8c0087eed7062cb6646d380727e1f8ad}{\index{Fila@{Fila}!E@{E}}
+\index{E@{E}!Fila@{Fila}}
+\subsubsection[{E}]{\setlength{\rightskip}{0pt plus 5cm}int Fila\+::\+E}}\label{class_fila_a8c0087eed7062cb6646d380727e1f8ad}
+\hypertarget{class_fila_a36a3d7e1492ea5bc367a23f6af9d1ce7}{\index{Fila@{Fila}!fila@{fila}}
+\index{fila@{fila}!Fila@{Fila}}
+\subsubsection[{fila}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Fila\+::fila}}\label{class_fila_a36a3d7e1492ea5bc367a23f6af9d1ce7}
+\hypertarget{class_fila_a8da3061b2ff7c7a9c93571383c345294}{\index{Fila@{Fila}!filen@{filen}}
+\index{filen@{filen}!Fila@{Fila}}
+\subsubsection[{filen}]{\setlength{\rightskip}{0pt plus 5cm}int Fila\+::filen}}\label{class_fila_a8da3061b2ff7c7a9c93571383c345294}
+\hypertarget{class_fila_ae89d6f3b865cf2e4fb66cb793df4b9d6}{\index{Fila@{Fila}!filord@{filord}}
+\index{filord@{filord}!Fila@{Fila}}
+\subsubsection[{filord}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Fila\+::filord}}\label{class_fila_ae89d6f3b865cf2e4fb66cb793df4b9d6}
+\hypertarget{class_fila_aa22383da45e0e0292cc7d137af754812}{\index{Fila@{Fila}!T@{T}}
+\index{T@{T}!Fila@{Fila}}
+\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}int Fila\+::\+T}}\label{class_fila_aa22383da45e0e0292cc7d137af754812}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/emanuel/\+Desktop/\+Labs/\+Lab\+C5/src/\hyperlink{_fila_8h}{Fila.\+h}\item 
+/home/emanuel/\+Desktop/\+Labs/\+Lab\+C5/src/\hyperlink{_fila_8cpp}{Fila.\+cpp}\end{DoxyCompactItemize}
